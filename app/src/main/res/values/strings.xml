@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">ViewModel</string>
+    <string name="app_name">Кликер</string>
+    <string name="textview_hedgehog">Еж</string>
+    <string name="textview_shrimp">Креветка</string>
+    <string name="textview_jellyfish">Медуза</string>
+    <string name="textview_score_default">0</string>
 </resources>
