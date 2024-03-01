@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zero_layout_width"
+        android:layout_margin="@dimen/default_margin_padding"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout_hedgehog"
+            android:layout_width="@dimen/zero_layout_width"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/linearLayout_jellyfish">
+
+            <TextView
+                android:id="@+id/textview_hedgehog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/textview_hedgehog"
+                android:textSize="@dimen/text_size_main_text"/>
+
+            <TextView
+                android:id="@+id/textview_hedgehog_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/textview_score_default"
+                android:textSize="@dimen/text_size_main_text"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout_shrimp"
+            android:layout_width="@dimen/zero_layout_width"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@+id/linearLayout_jellyfish"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/textview_shrimp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/textview_shrimp"
+                android:textSize="@dimen/text_size_main_text" />
+
+            <TextView
+                android:id="@+id/textview_shrimp_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/textview_score_default"
+                android:textSize="@dimen/text_size_main_text"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout_jellyfish"
+            android:layout_width="@dimen/zero_layout_width"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@+id/linearLayout_hedgehog"
+            app:layout_constraintStart_toEndOf="@+id/linearLayout_shrimp">
+
+            <TextView
+                android:id="@+id/textview_jellyfish"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/textview_jellyfish"
+                android:textSize="@dimen/text_size_main_text" />
+
+            <TextView
+                android:id="@+id/textview_jellyfish_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/textview_score_default"
+                android:textSize="@dimen/text_size_main_text"/>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="@dimen/image_button_layout_width"
+        android:layout_height="@dimen/image_button_layout_height"
+        android:scaleType="centerCrop"
+        android:src="@drawable/hedgehog_svg"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
